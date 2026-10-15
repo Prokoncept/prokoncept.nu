@@ -12,6 +12,7 @@ Statiske HTML-, CSS- og JavaScript-filer uden CMS eller buildproces. Upload file
 - indkoebsanalyse.html, leverandoerforhandlinger.html og forretningsoptimering.html: rådgivningssider med hver sin behovsafklaring.
 - app-indkoebsdashboard.html, app-tradebridge.html, app-contractstudio.html og app-vaerktoej.html: apps og eksempler.
 - om-prokoncept.html og medarbejdere.html: virksomhed og medarbejdere.
+- kontakt.html: adresse, CVR, telefon, e-mail og LinkedIn under Om Prokoncept.
 
 AI & Data og datamodenhedsscreeningen findes på forretningsoptimering.html#ai.
 

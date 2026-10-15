@@ -38,7 +38,7 @@
       get('[role=progressbar]').setAttribute('aria-valuenow', n);
       get('.quiz-bar-fill').style.width = `${n / questions.length * 100}%`;
     }
-    function render() {
+    function render(focus = true) {
       get('[data-step]').textContent = `Spørgsmål ${index + 1} af ${questions.length}`;
       get('legend').textContent = questions[index].question;
       get('.quiz-opts').replaceChildren();
@@ -52,9 +52,9 @@
       get('[data-back]').disabled = index === 0;
       get('[data-next]').disabled = answers[index] === null;
       get('[data-next]').textContent = index === questions.length - 1 ? 'Se forslag →' : 'Næste →';
-      progress(); get('legend').focus({ preventScroll: true });
+      progress(); if (focus) get('legend').focus({ preventScroll: true });
     }
-    function start() { index = 0; answers.fill(null); get('[data-welcome]').hidden = true; get('[data-result]').hidden = true; get('[data-wizard]').hidden = false; render(); }
+    function start(focus = true) { index = 0; answers.fill(null); get('[data-result]').hidden = true; get('[data-wizard]').hidden = false; render(focus); }
     function result() {
       const unknown = answers.filter(a => a === 3).length;
       const issues = answers.filter(a => a === 2).length;
@@ -71,8 +71,9 @@
       priorities.forEach(q => { const li = document.createElement('li'); li.textContent = `${q.value === 3 ? 'Afklar med de relevante kolleger: ' : q.value === 0 ? 'Som opfølgning kan I: ' : ''}${q.action}`; get('[data-actions]').append(li); });
       get('[data-wizard]').hidden = true; get('[data-result]').hidden = false; get('[data-result] h3').focus({ preventScroll: true });
     }
-    get('[data-start]').addEventListener('click',start); get('[data-restart]').addEventListener('click',start);
+    get('[data-restart]').addEventListener('click',()=>start());
     get('[data-back]').addEventListener('click',()=>{ if(index>0){index--;render();} });
     get('[data-next]').addEventListener('click',()=>{if(answers[index]===null)return; if(index<questions.length-1){index++;render();}else result();});
+    start(false);
   });
 })();

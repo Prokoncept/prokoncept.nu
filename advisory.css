@@ -30,8 +30,8 @@ section[id],article[id],#behov{scroll-margin-top:100px}
 #apps>.wrap>.eyebrow{margin-top:0;margin-bottom:8px}
 #apps>.wrap>.lede{max-width:950px;margin-top:12px;margin-bottom:0}
 #apps .apps-grid{margin-top:28px}
-#kontakt{padding-block:24px;min-height:calc(100vh - var(--site-header-height));min-height:calc(100svh - var(--site-header-height));scroll-margin-top:var(--site-header-height)}
-#kontakt .contact-box{padding:32px;gap:36px}
+#kontakt{background:var(--navy);padding-block:24px;scroll-margin-top:var(--site-header-height)}
+#kontakt .contact-box{background:transparent;border-radius:0;padding:32px;gap:36px}
 #kontakt .cform{padding:24px;gap:12px}
 #kontakt .field textarea{min-height:110px}
 #kontakt .field:not(.invalid) .ferr{display:none}
@@ -85,6 +85,7 @@ section[id],article[id],#behov{scroll-margin-top:100px}
 .needs-section{background:#f7faf8}
 .needs-layout{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:48px;align-items:start}
 .needs-layout>div:first-child p{color:var(--body)}
+.needs-layout>div:first-child .eyebrow{color:var(--green-dark)}
 .needs-check{width:100%;padding:28px}
 .needs-check .quiz-bar-fill{width:0}
 .needs-check .quiz-top{gap:12px;flex-wrap:wrap}

@@ -2,6 +2,24 @@
 .about-hero{padding:105px 0;background:linear-gradient(125deg,#09294c,#174e72);color:#fff}
 .about-hero h1{max-width:850px;margin:0;color:#fff;font:400 var(--text-hero)/1.1 var(--font-heading);letter-spacing:-.01em}
 .about-hero h1 em{color:var(--green);font-style:normal}
+.company-contact-hero{padding-block:48px}
+.company-contact-hero .eyebrow{color:#8bd67a}
+.company-contact-section{background:var(--mint);padding-block:48px}
+.company-contact-grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:64px;align-items:start}
+.company-contact-grid h2{font-size:var(--text-subheading);margin:0 0 24px}
+.company-contact-details address{font-style:normal;color:var(--body);font-size:var(--text-body);line-height:1.8}
+.company-cvr{margin:24px 0 0;color:var(--body)}
+.company-contact-card{padding:32px;background:#fff;border:1px solid var(--border);border-top:3px solid var(--green);border-radius:12px}
+.company-contact-card dl{margin:0 0 28px}
+.company-contact-card dl>div{margin-bottom:20px}
+.company-contact-card dt{font-size:var(--text-caption);color:var(--body);margin-bottom:4px}
+.company-contact-card dd{margin:0;font-size:var(--text-body);overflow-wrap:anywhere}
+.company-contact-card dd a{color:var(--navy);text-underline-offset:4px}
+.company-contact-card dd a:hover{color:var(--green-dark)}
+.company-contact-card a:focus-visible{outline:2px solid var(--green-dark);outline-offset:4px}
+.contact-direct a{color:inherit;text-underline-offset:4px}
+@media(max-width:900px){.company-contact-grid{grid-template-columns:1fr;gap:32px}}
+@media(max-width:560px){.company-contact-hero{padding-block:32px}.company-contact-section{padding-block:32px}.company-contact-card{padding:24px}}
 .about-hero p:last-child{max-width:700px;margin:27px 0 0;color:#c7d7e1;font-size:var(--text-body);line-height:1.65}
 .about-section{padding:100px 0}
 .about-section.soft{background:#f2f6f6}
