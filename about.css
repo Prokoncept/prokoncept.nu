@@ -1,31 +1,31 @@
 
 .about-hero{padding:105px 0;background:linear-gradient(125deg,#09294c,#174e72);color:#fff}
-.about-hero h1{max-width:850px;margin:0;color:#fff;font:400 clamp(44px,6vw,72px)/1.02 Manrope,sans-serif;letter-spacing:-3.5px}
+.about-hero h1{max-width:850px;margin:0;color:#fff;font:400 var(--text-hero)/1.1 var(--font-heading);letter-spacing:-.01em}
 .about-hero h1 em{color:var(--green);font-style:normal}
-.about-hero p:last-child{max-width:700px;margin:27px 0 0;color:#c7d7e1;font-size:18px;line-height:1.65}
+.about-hero p:last-child{max-width:700px;margin:27px 0 0;color:#c7d7e1;font-size:var(--text-body);line-height:1.65}
 .about-section{padding:100px 0}
 .about-section.soft{background:#f2f6f6}
 .about-split{display:grid;grid-template-columns:.85fr 1.15fr;gap:90px;align-items:start}
-.about-split h2,.team-intro h2{margin:0;color:var(--navy);font:400 clamp(36px,4vw,52px)/1.08 Manrope,sans-serif;letter-spacing:-2.6px}
-.about-copy{color:var(--muted);font-size:16px;line-height:1.75}
+.about-split h2,.team-intro h2{margin:0;color:var(--navy);font:400 var(--text-section)/1.2 var(--font-heading);letter-spacing:-.01em}
+.about-copy{color:var(--muted);font-size:var(--text-body);line-height:1.6}
 .about-copy p:first-child{margin-top:0}
 .value-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:50px}
 .value-grid article{padding:30px;background:#fff;border-top:4px solid var(--green);box-shadow:0 12px 30px rgba(9,41,76,.08)}
-.value-grid span{color:var(--green);font:400 12px Manrope,sans-serif}
-.value-grid h3{margin:13px 0 10px;color:var(--navy);font:400 20px Manrope,sans-serif}
-.value-grid p{margin:0;color:var(--muted);font-size:13px;line-height:1.6}
+.value-grid span{color:var(--green);font:400 12px var(--font-heading)}
+.value-grid h3{margin:13px 0 10px;color:var(--navy);font:400 var(--text-card-title) var(--font-heading)}
+.value-grid p{margin:0;color:var(--muted);font-size:16px;line-height:1.6}
 .team-intro{max-width:750px;margin-bottom:45px}
-.team-intro>p:last-child{color:var(--muted);font-size:16px;line-height:1.7}
+.team-intro>p:last-child{color:var(--muted);font-size:var(--text-body);line-height:1.6}
 .team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .team-card{overflow:hidden;background:#fff;border:1px solid #dce6e7;box-shadow:0 14px 34px rgba(9,41,76,.08)}
-.team-placeholder{display:grid;place-items:center;aspect-ratio:1.15;background:linear-gradient(145deg,#dcebea,#edf4f3);color:var(--navy);font:400 42px Manrope,sans-serif}
+.team-placeholder{display:grid;place-items:center;aspect-ratio:1.15;background:linear-gradient(145deg,#dcebea,#edf4f3);color:var(--navy);font:400 42px var(--font-heading)}
 .team-card>div:last-child{padding:24px}
-.team-card h2{margin:0;color:var(--navy);font:400 20px Manrope,sans-serif}
+.team-card h2{margin:0;color:var(--navy);font:400 var(--text-card-title) var(--font-heading)}
 .team-role{margin:6px 0 17px;color:#4d877f;font-size:12px;font-weight:400}
-.team-card p:last-child{margin:0;color:var(--muted);font-size:13px;line-height:1.6}
+.team-card p:last-child{margin:0;color:var(--muted);font-size:16px;line-height:1.6}
 .dummy-note{display:inline-block;margin-top:18px;padding:8px 10px;background:#fff4d9;color:#85631d;font-size:10px;font-weight:400}
 
-.about-menu{position:relative;color:var(--navy);font-size:14.5px;font-weight:400}
+.about-menu{position:relative;color:var(--navy);font-size:var(--text-control);font-weight:400}
 .about-menu summary{display:flex;align-items:center;gap:8px;cursor:pointer;list-style:none;white-space:nowrap;padding-block:6px}
 .about-menu summary::-webkit-details-marker{display:none}
 .about-menu summary::after{content:"";width:7px;height:7px;border-right:1px solid currentColor;border-bottom:1px solid currentColor;transform:rotate(45deg);margin-top:-4px}
@@ -39,15 +39,15 @@
 .subpage{--muted:var(--body);min-height:100vh;display:flex;flex-direction:column}
 .subpage main{flex:1}
 .subpage .steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:26px}
-.subpage .steps h3{font-size:21px;margin:16px 0 8px}
+.subpage .steps h3{font-size:var(--text-card-title);margin:16px 0 8px}
 .subpage .steps span{color:var(--green-dark)}
-.subpage .steps p{font-size:14px;color:var(--body)}
+.subpage .steps p{font-size:var(--text-small);color:var(--body)}
 .subpage .contact{background:var(--navy);color:#fff;padding:70px 0}
 .subpage .contact-inner{display:flex;justify-content:space-between;align-items:center;gap:30px}
-.subpage .contact h2{font-size:clamp(28px,4vw,46px);color:#fff;line-height:1.15}
+.subpage .contact h2{font-size:var(--text-section);color:#fff;line-height:1.15}
 .subpage .contact em{font-style:normal;color:var(--green)}
 .subpage .contact .button{display:inline-flex;align-items:center;gap:18px;background:#fff;color:var(--navy);padding:14px 22px;border-radius:var(--r);text-decoration:none}
 .subpage .back-to-top{align-self:flex-end;margin:20px 24px;padding:8px 16px;color:var(--navy);text-decoration:none}
-@media(max-width:1100px) and (min-width:901px){.navlinks{gap:12px}.navlinks a,.about-menu{font-size:12px}header.site .btn{padding:12px 16px}.brand-block .brand{font-size:18px}}
+@media(max-width:1100px) and (min-width:901px){.navlinks{gap:12px}.navlinks a,.about-menu{font-size:12px}header.site .btn{padding:12px 16px}.brand-block .brand{font-size:var(--text-body)}}
 @media(max-width:900px){.mobile-panel .about-menu>div{position:static;width:100%;box-shadow:none;margin-top:5px;background:var(--mint)}.mobile-panel .about-menu summary{padding:13px 4px}.about-split{grid-template-columns:1fr;gap:30px}.team-grid,.subpage .steps{grid-template-columns:repeat(2,minmax(0,1fr))}.value-grid{grid-template-columns:1fr}.about-section{padding:65px 0}.subpage .contact-inner{align-items:flex-start;flex-direction:column}}
-@media(max-width:560px){.team-grid,.subpage .steps{grid-template-columns:1fr}.about-hero{padding:65px 0}.about-hero h1{font-size:40px;letter-spacing:-1.5px}.about-split h2,.team-intro h2{font-size:32px;letter-spacing:-1px}}
+@media(max-width:560px){.team-grid,.subpage .steps{grid-template-columns:1fr}.about-hero{padding:65px 0}.about-hero h1{letter-spacing:-.01em}.about-split h2,.team-intro h2{letter-spacing:-.01em}}

@@ -1,16 +1,25 @@
 # Prokoncept.nu
 
-Den aktuelle hjemmeside fra prokoncept_web, baseret på Asrins version med udvalgte elementer fra Mettes version.
+Prokoncepts hjemmeside med fokus på konsulentrådgivning: indkøbsanalyse, leverandørforhandlinger og forretningsoptimering. Apps og tilpassede værktøjer understøtter rådgivningen.
 
 ## Brug
 
-Hjemmesiden består af HTML, CSS og JavaScript og kræver ingen buildproces eller CMS. Upload filerne og assets-mappen til webhotellets webrod. index.html er forsiden.
+Statiske HTML-, CSS- og JavaScript-filer uden CMS eller buildproces. Upload filerne og assets-mappen til webhotellets webrod. index.html er forsiden.
+
+## Sider
+
+- index.html: forside med de tre rådgivningsområder, ydelser, apps og kontakt.
+- indkoebsanalyse.html, leverandoerforhandlinger.html og forretningsoptimering.html: rådgivningssider med hver sin behovsafklaring.
+- app-indkoebsdashboard.html, app-tradebridge.html, app-contractstudio.html og app-vaerktoej.html: apps og eksempler.
+- om-prokoncept.html og medarbejdere.html: virksomhed og medarbejdere.
+
+AI & Data og datamodenhedsscreeningen findes på forretningsoptimering.html#ai.
 
 ## Status
 
-- Demoer åbnes i modalvinduer og drives på shinyapps.io.
-- Datamodenhedsscreeningen kører lokalt i browseren uden lagring af svar.
+- Behovsafklaringer og datamodenhedsscreening kører lokalt i browseren uden lagring eller afsendelse af svar.
+- Indkøbsdashboard- og TradeBridge-demoer åbnes i modalvinduer og drives på shinyapps.io.
 - Database og afsendelse af kontaktformularen er endnu ikke tilsluttet.
-- Billedpladsen under Værktøj samt foreløbig virksomheds- og medarbejdertekst tilpasses senere.
+- Billedpladsen på Værktøj-siden samt foreløbig virksomheds- og medarbejdertekst tilpasses senere.
 
-Originalversioner, klip og lokale forhåndsvisninger indgår ikke i dette repository.
+Originalversioner, klip, lokale backups og forhåndsvisninger indgår ikke i dette repository.

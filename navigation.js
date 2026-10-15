@@ -1,4 +1,4 @@
-/* Shared dropdown behavior; the home page keeps its existing mobile handler. */
+/* Shared desktop/mobile navigation on the home page and every subpage. */
 (() => {
   const header = document.getElementById('siteHeader');
   const burger = document.getElementById('burgerBtn');
@@ -21,7 +21,7 @@
       burger.focus();
     }
   });
-  if (document.body.classList.contains('subpage')) {
+  if (header && burger) {
     burger.addEventListener('click', () => {
       const open = header.classList.toggle('open');
       burger.setAttribute('aria-expanded', String(open));
@@ -31,4 +31,23 @@
       burger.setAttribute('aria-expanded', 'false');
     }));
   }
+  document.querySelectorAll('a[href^="#"]').forEach(link => link.addEventListener('click', event => {
+    const target = document.getElementById(link.hash.slice(1));
+    if (!target) return;
+    event.preventDefault();
+    target.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
+  }));
+  const links = [...document.querySelectorAll('#navlinks > a[href^="#"]')];
+  const updateActive = () => {
+    const active = links.filter(link => {
+      const section = document.getElementById(link.hash.slice(1));
+      return section && section.getBoundingClientRect().top <= 120;
+    }).at(-1);
+    links.forEach(link => link.classList.toggle('active', link === active));
+  };
+  addEventListener('scroll', updateActive, { passive: true });
+  updateActive();
+  document.querySelectorAll('.about-menu a').forEach(link => {
+    if (link.getAttribute('href') === location.pathname.split('/').pop()) link.setAttribute('aria-current', 'page');
+  });
 })();
