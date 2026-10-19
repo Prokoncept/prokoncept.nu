@@ -1,0 +1,21 @@
+/* Mette's centered cookie layout, using the current site's regular type and colors. */
+.cookie-banner{position:fixed;inset:0;margin:auto;box-sizing:border-box;width:min(720px,calc(100% - 40px));max-height:calc(100svh - 40px);overflow:auto;padding:34px;border:1px solid #d7e3e4;border-radius:16px;background:#fff;color:#132a4a;box-shadow:0 20px 60px #09294c4d;font:400 15px/1.6 'DM Sans',sans-serif}
+.cookie-banner::backdrop{background:rgba(5,25,46,.66)}
+.cookie-banner [hidden]{display:none!important}
+.cookie-banner .cookie-kicker{margin:0 0 7px;color:#4c8a3c;font-size:12px;letter-spacing:1.3px}
+.cookie-banner h2{margin:0;color:#132a4a;font:400 24px/1.25 Manrope,sans-serif}
+.cookie-banner p{margin:12px 0;color:#526586;font-size:15px;line-height:1.6}
+.cookie-banner a{color:#132a4a;text-underline-offset:4px}
+.cookie-actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:flex-end;margin-top:26px}
+.cookie-button{border:1px solid #cad9dd;border-radius:9px;padding:12px 16px;font:400 14px 'DM Sans',sans-serif;cursor:pointer}
+.cookie-button.secondary{background:#fff;color:#132a4a}
+.cookie-button.primary{border-color:#132a4a;background:#132a4a;color:#fff}
+.cookie-button:hover{border-color:#4c8a3c}.cookie-button.primary:hover{background:#4c8a3c;border-color:#4c8a3c}
+.cookie-settings-trigger{position:fixed;left:16px;bottom:15px;z-index:890;border:1px solid #cad9dd;border-radius:99px;background:#fff;padding:9px 14px;color:#132a4a;font:400 13px 'DM Sans',sans-serif;box-shadow:0 7px 20px #09294c24;cursor:pointer}
+.cookie-category{display:flex;gap:24px;justify-content:space-between;align-items:center;padding:18px 0;border-top:1px solid #dfe8e9}
+.cookie-category h3,.cookie-category-title{display:block;margin:0;color:#132a4a;font:400 17px/1.4 Manrope,sans-serif}
+.cookie-category p,.cookie-category-description{display:block;margin:5px 0 0;color:#526586;font-size:14px;line-height:1.5}
+.cookie-category>span:last-child:not(:first-child){color:#4c8a3c;font-size:13px;white-space:nowrap}
+.cookie-category input{width:22px;height:22px;flex-shrink:0;accent-color:#4c8a3c}
+.cookie-banner :focus-visible,.cookie-settings-trigger:focus-visible{outline:2px solid #132a4a;outline-offset:4px}
+@media(max-width:760px){.cookie-banner{width:calc(100% - 28px);max-height:calc(100svh - 28px);padding:24px}.cookie-actions{display:grid;grid-template-columns:1fr 1fr}.cookie-actions .primary{grid-column:1/-1}.cookie-button{width:100%}.cookie-category{gap:14px}}

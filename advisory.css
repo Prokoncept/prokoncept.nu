@@ -19,7 +19,7 @@ section[id],article[id],#behov{scroll-margin-top:100px}
 .advisory-teaser>.wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:64px;align-items:start}
 /* Each main consultancy area occupies the viewport below the sticky menu. */
 :root{--site-header-height:85px}
-.advisory-teaser:is(#indkobsanalyse,#leverandorforhandlinger,#forretningsoptimering){min-height:calc(100vh - var(--site-header-height));min-height:calc(100svh - var(--site-header-height));display:flex;align-items:center;scroll-margin-top:var(--site-header-height);padding-block:clamp(32px,6vh,84px)}
+.advisory-teaser:is(#indkobsanalyse,#leverandorforhandlinger,#forretningsoptimering,#ai){min-height:calc(100vh - var(--site-header-height));min-height:calc(100svh - var(--site-header-height));display:flex;align-items:center;scroll-margin-top:var(--site-header-height);padding-block:clamp(32px,6vh,84px)}
 @media(max-width:1240px){:root{--site-header-height:73px}}
 #ydelser{padding-block:24px;min-height:calc(100vh - var(--site-header-height));min-height:calc(100svh - var(--site-header-height));scroll-margin-top:var(--site-header-height)}
 #ydelser .svc-intro{max-width:none;margin-bottom:24px}
@@ -80,6 +80,12 @@ section[id],article[id],#behov{scroll-margin-top:100px}
 .tools-page .app-page-intro{padding-block:26px 16px}
 .tools-page .app-page-intro .eyebrow{margin-top:12px}
 .tools-page #beregner{padding-block:24px 56px}
+.contractstudio-page .app-page-intro{padding-block:26px 0}
+.contractstudio-page .app-page-intro .eyebrow{margin-top:12px}
+.contractstudio-overview{padding-block:24px 56px}
+.contractstudio-overview .split{align-items:start}
+.contractstudio-overview .tools-visual{width:100%;max-width:460px;justify-self:end}
+@media(max-width:900px){.contractstudio-overview .tools-visual{justify-self:center}}
 .app-page .tradebridge-overview{padding-block:0}
 .app-page .tools-example{margin-top:64px}
 .needs-section{background:#f7faf8}
@@ -99,3 +105,8 @@ section[id],article[id],#behov{scroll-margin-top:100px}
 @media(max-width:1240px){.navlinks{display:none}.burger{display:flex}nav.wrap{height:72px}.mobile-panel .about-menu>div{position:static;width:100%;box-shadow:none;background:var(--mint)}.mobile-panel .about-menu summary{padding:13px 4px}.mobile-panel .about-menu{width:100%}}
 @media(max-width:1000px){.advisory-teaser>.wrap,.advisory-detail,.needs-layout{grid-template-columns:1fr;gap:30px}.advisory-teaser-list{padding-top:0}.apps-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.advisory-contact>.wrap{flex-direction:column;align-items:flex-start}}
 @media(max-width:640px){.advisory-home-hero .wrap{padding-block:40px}.advisory-hero-visual{padding:22px}.advisory-hero-visual h2{font-size:24px}.apps-grid{grid-template-columns:1fr}.needs-check{padding:22px}.needs-check .btn{padding:12px 16px}.advisory-actions{gap:14px}.advisory-teaser-list{gap:20px}.advisory-contact .btn{white-space:normal}.header-actions>.btn{padding:11px 14px;font-size:14px}.brand-block .brand{font-size:18px}}
+
+/* Full screenshot of a company-specific tool; preserve the original aspect ratio. */
+.tools-image-frame{padding:12px;background:#fff;border:1px solid #cadbce;border-radius:18px;box-shadow:0 16px 36px #132a4a14}
+.tools-image-frame img{display:block;width:100%;height:auto;border-radius:8px}
+.tools-visual figcaption{margin-top:14px;text-align:center;color:var(--body);font-size:var(--text-small);line-height:1.5}

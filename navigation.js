@@ -1,5 +1,13 @@
 /* Shared desktop/mobile navigation on the home page and every subpage. */
 (() => {
+  // Keep previously shared AI and screening links working after the page split.
+  const redirectLegacyDataLink = () => {
+    if (location.pathname.endsWith('/forretningsoptimering.html') && ['#ai', '#datamodenhed'].includes(location.hash)) {
+      location.replace('ai-data.html' + (location.hash === '#datamodenhed' ? location.hash : ''));
+    }
+  };
+  redirectLegacyDataLink();
+  addEventListener('hashchange', redirectLegacyDataLink);
   const header = document.getElementById('siteHeader');
   const burger = document.getElementById('burgerBtn');
   const menus = [...document.querySelectorAll('.about-menu')];
